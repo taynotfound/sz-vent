@@ -2,4 +2,6 @@
 
 This Bot forwards its DM messages to the Vent Channel on the Spacezone.eu Discord.
 
-### Not yet coded
+# Selfhosting
+
+Change the Variables in Config.example.json to your own settings.
