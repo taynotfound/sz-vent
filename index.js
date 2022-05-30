@@ -22,19 +22,21 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     console.log(`Bot is ready!`);
-    client.user.setActivity(`with your Vents` );
+    client.user.setActivity(`with your Vents | DM to Vent` );
     });
 
 
 client.on('messageCreate', message => {
     if(message.author.bot) return;
     if(message.guildId === null) {
+	if(message.author.id) === "808410552166514698") return message.reply("Du wurdest aus dem Vent Bot ausgeschlossen! Wenn du denkst dies ist zu unrecht passiert melde dich im Support!") 
         client.channels.resolve(config.channel).send({embeds: [{
             title: "Vent",
             description: message.content,
             footer: {
                 text: `Jede Nachricht die inakzeptabel ist wird gelöscht!`
             },
+	timestamp: Date.now(),
             color: "RANDOM"
             }]});
     }
