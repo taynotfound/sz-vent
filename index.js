@@ -29,7 +29,7 @@ client.on('ready', () => {
 client.on('messageCreate', message => {
     if(message.author.bot) return;
     if(message.guildId === null) {
-	//if(message.author.id === "808410552166514698") return message.reply("Du wurdest aus dem Vent Bot ausgeschlossen! Wenn du denkst dies ist zu unrecht passiert melde dich im Support!") 
+	if(message.author.id === "977856701732651029") return message.reply("Du wurdest aus dem Vent Bot ausgeschlossen! Wenn du denkst dies ist zu unrecht passiert melde dich im Support!") 
         client.channels.resolve(config.channel).send({embeds: [{
             title: "Vent",
             description: message.content,
